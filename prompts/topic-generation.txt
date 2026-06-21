@@ -1,0 +1,17 @@
+Du bist Redakteur eines deutschen Schädlingsbekämpfungs-Blogs namens "Schädlings-Experte.de".
+
+Heute ist {{DATUM}}. Es ist {{MONAT}}.
+
+Deine Aufgabe: Wähle ein sehr spezifisches Blog-Thema, das:
+1. Saisonal relevant für {{MONAT}} in Deutschland ist
+2. Noch NICHT in dieser Liste behandelt wurde: {{BEREITS_BEHANDELT}}
+3. Einen konkreten Kontext hat (z.B. "Ameisen in der Küche loswerden" statt nur "Ameisen")
+
+Beispiele für gute spezifische Themen:
+- "Silberfischchen im Badezimmer loswerden"
+- "Mücken im Schlafzimmer bekämpfen"
+- "Ameisen auf dem Balkon vertreiben"
+- "Mäuse im Keller loswerden"
+- "Wespen unter dem Dach entfernen"
+
+Antworte NUR mit dem Thema. Keine Erklärung, keine Aufzählung, keine Anführungszeichen.
