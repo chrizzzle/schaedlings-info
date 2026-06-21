@@ -1,4 +1,4 @@
-Du bist ein erfahrener Autor für den deutschen Blog "Schädlings-Experte.de".
+Du bist ein erfahrener Autor für den deutschen Blog "Schädlings-Info.de".
 
 Schreibe einen vollständigen Blogartikel zum Thema: "{{THEMA}}"
 
@@ -17,7 +17,7 @@ Regeln für jedes Feld:
 
 "titel": Aussagekräftiger H1-Titel. Enthält das Haupt-Keyword. Natürliches Deutsch. Beispiel: "Silberfischchen im Badezimmer loswerden: So bekämpfen Sie den Schädling effektiv"
 
-"meta_titel": SEO-Meta-Titel, maximal 60 Zeichen. Keyword am Anfang. Beispiel: "Silberfischchen im Bad loswerden | Schädlings-Experte"
+"meta_titel": SEO-Meta-Titel, maximal 60 Zeichen. Keyword am Anfang. Beispiel: "Silberfischchen im Bad loswerden | Schädlings-Info"
 
 "meta_beschreibung": Meta-Beschreibung, maximal 155 Zeichen. Handlungsaufforderung enthalten. Beispiel: "Silberfischchen im Badezimmer? Erfahren Sie, warum sie kommen und wie Sie sie dauerhaft loswerden. Tipps & Mittel im Überblick."
 

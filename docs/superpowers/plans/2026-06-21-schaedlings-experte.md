@@ -1,4 +1,4 @@
-# schädlings-experte.de Implementation Plan
+# schädlings-info.de Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -46,7 +46,7 @@ docs/
 
 - [ ] **Step 1: Install WordPress**
 
-  Log into your hoster's control panel. Find the one-click WordPress installer (usually under "CMS" or "WordPress"). Install to the root of `schaedlings-experte.de`. Note the admin username and password.
+  Log into your hoster's control panel. Find the one-click WordPress installer (usually under "CMS" or "WordPress"). Install to the root of `schaedlings-info.de`. Note the admin username and password.
 
 - [ ] **Step 2: Install theme**
 
@@ -56,7 +56,7 @@ docs/
 
   WordPress Admin → Settings → Permalinks → select **Post name** (`/%postname%/`) → Save Changes.
 
-  Verify: the setting shows `https://schaedlings-experte.de/sample-post/` in the preview.
+  Verify: the setting shows `https://schaedlings-info.de/sample-post/` in the preview.
 
 - [ ] **Step 4: Install Yoast SEO**
 
@@ -78,7 +78,7 @@ docs/
 
   Open a browser and navigate to:
   ```
-  https://schaedlings-experte.de/wp-json/wp/v2/posts
+  https://schaedlings-info.de/wp-json/wp/v2/posts
   ```
   Expected: a JSON response (empty array `[]` or list of posts). If you see a 404, the permalink structure wasn't saved — redo Step 3.
 
@@ -121,7 +121,7 @@ docs/
   - Content (paste this text, adjust name if desired):
 
   ```
-  Willkommen bei Schädlings-Experte.de — Ihrem Ratgeber rund um Schädlinge im Haus und Garten.
+  Willkommen bei Schädlings-Info.de — Ihrem Ratgeber rund um Schädlinge im Haus und Garten.
 
   Wir helfen Ihnen dabei, ungebetene Gäste schnell und effektiv loszuwerden. 
   Unsere Artikel erklären das Verhalten der häufigsten Schädlinge und zeigen Ihnen 
@@ -146,9 +146,9 @@ docs/
 - [ ] **Step 5: Verify pages**
 
   Visit each URL in browser:
-  - `https://schaedlings-experte.de/ueber-uns/`
-  - `https://schaedlings-experte.de/impressum/`
-  - `https://schaedlings-experte.de/datenschutz/`
+  - `https://schaedlings-info.de/ueber-uns/`
+  - `https://schaedlings-info.de/impressum/`
+  - `https://schaedlings-info.de/datenschutz/`
 
   All three should load with the correct content and show the navigation menu.
 
@@ -169,7 +169,7 @@ docs/
 
   Go to [sheets.google.com](https://sheets.google.com) → Blank spreadsheet.
 
-  Name it: `schädlings-experte`
+  Name it: `schädlings-info`
 
 - [ ] **Step 2: Set up Topics tab**
 
@@ -217,7 +217,7 @@ docs/
   Create `prompts/topic-generation.txt`:
 
   ```
-  Du bist Redakteur eines deutschen Schädlingsbekämpfungs-Blogs namens "Schädlings-Experte.de".
+  Du bist Redakteur eines deutschen Schädlingsbekämpfungs-Blogs namens "Schädlings-Info.de".
 
   Heute ist {{DATUM}}. Es ist {{MONAT}}.
 
@@ -241,7 +241,7 @@ docs/
   Create `prompts/article-generation.txt`:
 
   ```
-  Du bist ein erfahrener Autor für den deutschen Blog "Schädlings-Experte.de".
+  Du bist ein erfahrener Autor für den deutschen Blog "Schädlings-Info.de".
 
   Schreibe einen vollständigen Blogartikel zum Thema: "{{THEMA}}"
 
@@ -260,7 +260,7 @@ docs/
 
   "titel": Aussagekräftiger H1-Titel. Enthält das Haupt-Keyword. Natürliches Deutsch. Beispiel: "Silberfischchen im Badezimmer loswerden: So bekämpfen Sie den Schädling effektiv"
 
-  "meta_titel": SEO-Meta-Titel, maximal 60 Zeichen. Keyword am Anfang. Beispiel: "Silberfischchen im Bad loswerden | Schädlings-Experte"
+  "meta_titel": SEO-Meta-Titel, maximal 60 Zeichen. Keyword am Anfang. Beispiel: "Silberfischchen im Bad loswerden | Schädlings-Info"
 
   "meta_beschreibung": Meta-Beschreibung, maximal 155 Zeichen. Handlungsaufforderung enthalten. Beispiel: "Silberfischchen im Badezimmer? Erfahren Sie, warum sie kommen und wie Sie sie dauerhaft loswerden. Tipps & Mittel im Überblick."
 
@@ -353,7 +353,7 @@ docs/
 
   make.com → Scenarios → Create a new scenario.
 
-  Name it: `schädlings-experte — Wöchentlicher Artikel`
+  Name it: `schädlings-info — Wöchentlicher Artikel`
 
 - [ ] **Step 2: Add Schedule trigger**
 
@@ -372,7 +372,7 @@ docs/
 
   Settings:
   - Connection: your Google account
-  - Spreadsheet: `schädlings-experte`
+  - Spreadsheet: `schädlings-info`
   - Sheet: `Topics`
   - Filter: *(leave empty — fetch all rows)*
   - Column range: A through C
@@ -395,7 +395,7 @@ docs/
   Add module → Google Sheets → **Get a Cell**.
 
   Settings:
-  - Spreadsheet: `schädlings-experte`
+  - Spreadsheet: `schädlings-info`
   - Sheet: `Control`
   - Cell: `A2`
 
@@ -613,12 +613,12 @@ docs/
 
   Before building the module, confirm the exact field names Yoast exposes. In your browser, navigate to:
   ```
-  https://schaedlings-experte.de/wp-json/wp/v2/posts?_fields=id,title,yoast_head_json
+  https://schaedlings-info.de/wp-json/wp/v2/posts?_fields=id,title,yoast_head_json
   ```
 
   If this works, Yoast SEO exposes data via `yoast_head_json`. However, to *write* meta fields you need the `yoast_wpseo_title` and `yoast_wpseo_metadesc` fields. Verify they're writable by checking:
   ```
-  https://schaedlings-experte.de/wp-json/wp/v2/posts/schema
+  https://schaedlings-info.de/wp-json/wp/v2/posts/schema
   ```
   Look for `yoast` in the schema response. If these fields aren't present, install the **Yoast SEO - REST API** plugin (free, by Trifenol) which exposes them explicitly.
 
@@ -627,7 +627,7 @@ docs/
   Add module → HTTP → **Make a request**.
 
   Settings:
-  - URL: `https://schaedlings-experte.de/wp-json/wp/v2/posts`
+  - URL: `https://schaedlings-info.de/wp-json/wp/v2/posts`
   - Method: POST
   - Headers:
     - `Content-Type`: `application/json`
@@ -690,7 +690,7 @@ docs/
   After the WordPress publish module → Add module → Google Sheets → **Update a Cell**.
 
   Settings:
-  - Spreadsheet: `schädlings-experte`
+  - Spreadsheet: `schädlings-info`
   - Sheet: `Control`
   - Cell: `A2`
   - Value: *(empty string)*
@@ -702,7 +702,7 @@ docs/
   Add module → Google Sheets → **Add a Row**.
 
   Settings:
-  - Spreadsheet: `schädlings-experte`
+  - Spreadsheet: `schädlings-info`
   - Sheet: `Topics`
   - Values (map columns A, B, C):
     - A: `{{formatDate(now; "YYYY-MM-DD")}}`
@@ -729,7 +729,7 @@ docs/
   13. Google Sheets Update Cell — Control A2 cleared ✓
   14. Google Sheets Add Row — new row in Topics tab with date, topic, post ID ✓
 
-  Check the published post lives at: `https://schaedlings-experte.de/{{slug}}/`
+  Check the published post lives at: `https://schaedlings-info.de/{{slug}}/`
 
 - [ ] **Step 4: Verify Topics log**
 
@@ -767,6 +767,6 @@ These are not implementation tasks but things to check in the first two weeks:
 - [ ] Verify second and third scheduled runs complete without errors (check make.com execution history)
 - [ ] Confirm Topics log grows correctly (no duplicate topics)
 - [ ] Review 3–4 published articles for quality — adjust prompts if needed and commit changes
-- [ ] Check Google Search Console (add property for schaedlings-experte.de, submit sitemap: `https://schaedlings-experte.de/sitemap_index.xml`)
+- [ ] Check Google Search Console (add property for schaedlings-info.de, submit sitemap: `https://schaedlings-info.de/sitemap_index.xml`)
 - [ ] Verify Amazon Associates account is still active (log in to partnernet.amazon.de)
 - [ ] If PA API not yet active: manually add SiteStripe affiliate links to the first batch of articles

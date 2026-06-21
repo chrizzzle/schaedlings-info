@@ -1,4 +1,4 @@
-# schädlings-experte.de — Design Spec
+# schädlings-info.de — Design Spec
 
 **Date:** 2026-06-21
 **Status:** Approved
